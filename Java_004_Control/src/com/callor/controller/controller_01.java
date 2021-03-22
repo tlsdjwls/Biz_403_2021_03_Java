@@ -49,7 +49,7 @@ public class controller_01 {
 			   /* 
 			    * 3의 배수이면서 5의 배수 
 			    * 
-			    * ㅜㅕㅡ % 3 == 0 AND num % 5==0
+			    * num % 3 == 0 AND num % 5==0
 			    * 
 			    */
 			   if(num1 % 3 == 0 ) {
