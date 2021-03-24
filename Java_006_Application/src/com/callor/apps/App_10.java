@@ -46,7 +46,7 @@ public class App_10 {
             	  intNums[j] = intNums[i];
             	  intNums[j] = temp;
               }
-             System.out.println(Arrays.toString(temp)); 
+             System.out.println(Arrays.toString(intNams)); 
 			}
 		}
 	}
