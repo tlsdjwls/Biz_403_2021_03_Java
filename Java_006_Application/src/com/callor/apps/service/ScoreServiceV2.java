@@ -46,6 +46,7 @@ public class ScoreServiceV2 {
 	 					intKor[i],intEng[i],intMath[i]);
 	 		}
 			System.out.println("========================");
+			System.out.println
 		
 	}
 }

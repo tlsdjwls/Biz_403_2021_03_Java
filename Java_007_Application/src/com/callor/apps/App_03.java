@@ -14,7 +14,10 @@ public class App_03 {
 		psVA.makeNums();
 		psVB.makeNums();
 		
-		
+		System.out.println("=====================");
+		System.out.println("psV1");
+		System.out.println("---------------------");
+		psV1.printPrime();
 		
 	}
 }
