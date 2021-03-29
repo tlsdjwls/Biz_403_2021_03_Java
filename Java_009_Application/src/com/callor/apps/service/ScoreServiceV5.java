@@ -43,6 +43,14 @@ public class ScoreServiceV5 {
 				}
 
 			}
+			/*
+			 * 3과목에 점수를 저장할 배열을 10개 만들었다고 가정함
+			 * 
+			 * 8번 요소의 배열에 각각 점수를 저장하자
+			 * intKor[8] = 90;
+			 * intEng[8] = 70;
+			 * intMath[8] = 66;
+			 */
 			intKor[i] = scores[0];
 			intEng[i] = scores[1];
 			intMath[i] = scores[2];
