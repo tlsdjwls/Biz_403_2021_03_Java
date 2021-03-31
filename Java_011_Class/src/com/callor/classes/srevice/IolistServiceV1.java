@@ -51,6 +51,11 @@ public class IolistServiceV1 {
 				System.out.println("0.업무종료");
 				System.out.println("-".repeat(50));
 				System.out.println("업무선택 >> ");
+				String strMenu = scan.nextLine();
+				if(strMenu.equals("QUIT")) {
+					continue;
+				}
+				
 				int intMenu = scan.nextInt();
 				if(intMenu == 0) {
 					break;
@@ -70,11 +75,14 @@ public class IolistServiceV1 {
 	}
 	public void input() {
 		// TODO 업무 매뉴 쓰기
-		System.out.println("=======================");
+		System.out.println("=".repeat(30));
 		System.out.println("매입 매출 등록");
-		System.out.println("-----------------------");
+		System.out.println("-".repeat(30));
 		System.out.print("상품명 >> ");
 		String pname = scan.next();
+		if(pname .equals("QUIT")) {
+			return;
+		}
 		
 		System.out.println("거래일자(yyyy-mm-dd) >> ");
 		String date = scan.next();
@@ -89,10 +97,10 @@ public class IolistServiceV1 {
 		String qty = scan.next();
 		
 		System.out.println("매입단가 >> ");
-		String iprice = scan.next();
+		Integer iprice = scan.nextInt();
 		
 		System.out.println("매출단가 >> ");
-		String  oprice= scan.next();
+		Integer oprice = scan.nextInt();
 		
 		IolistVO iolistVO = new IolistVO();
 		iolistVO.getPname();
