@@ -36,7 +36,7 @@
  git commit -m "eeeee"
 
  7. local 저장소에 있는 파일들을 원격저장소로 업로드하라 
-  git push https://github.com/tlsdjwls/Biz_403_2021_03_Java master
+  git push  
 
 
 
