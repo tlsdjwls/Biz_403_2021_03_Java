@@ -22,7 +22,7 @@ public class ScoreServiceImplV2 implements ScoreService {
 		// TODO 매뉴
 		List<String> scoreMenu = new ArrayList<String>();
 		scan = new Scanner(System.in);
-		menuService = new MenuServiceImplV1("빛고을 고교 성적처리", scoreMenu);
+		menuService = new ScoreServiceImplV1("빛고을 고교 성적처리", scoreMenu);
 		scoreMenu.add("성적입력");
 		scoreMenu.add("성적 리스트 출력");
 		scoreMenu.add("성적 저장");

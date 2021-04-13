@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 import com.tlsdjwls.standar.MenuService;
 
+  /*
+   *  new MenuServiceImplV1  형식으로 작성이 안된다
+   *  반드시
+   */
+  
 public class MenuServiceImplV1 implements MenuService {
  	
 	 protected List<String> menuList;

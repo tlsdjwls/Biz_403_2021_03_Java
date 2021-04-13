@@ -1,5 +1,7 @@
 package com.callor.app.service.impl;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -117,6 +119,7 @@ public class ScoreServiceImplV2Ex extends ScoreServiceImplV2 {
 		System.out.println("평균");
 		System.out.println("-".repeat(80));
 		
+		
 		int nSize = scoreList.size();
 		for(int i = 0 ; i < nSize ; i++) {
 			ScoreVO vo = scoreList.get(i);
@@ -129,27 +132,14 @@ public class ScoreServiceImplV2Ex extends ScoreServiceImplV2 {
 			System.out.print(vo.getAvg() + "\n");
 		}
 		System.out.println("=".repeat(80));
-	}
-	@Override
-	public void saveScore() {
-		
-		System.out.println("성적리스트 저장");
-		System.out.println("저장할 파일이름을 입력하세요");
-		System.out.print(">> ");
-		String strFileName = scan.nextLine();
-		if(strFileName.equals("")) {
-			System.out.println("파일이름을 입력해야 합니다");
-			return;
-		}
-		
+	
 		
 		
 		
 	}
+}	
+
 	
 	
-	
-	
-	
-}
+
 
