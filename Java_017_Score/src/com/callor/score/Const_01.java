@@ -52,12 +52,12 @@ public class Const_01 {
 	 * 
 	 * 세개의 method는 하는일이 똑같은 코드이지만 매개변수 type이 달라서 어쩔수 없이 중복하는 코드가 된다
 	 */
-	public static void list1(List<String>strList) {
+	    public static void list1(List<String>strList) {
     	int nSize = strList.size();
     	for(int i = 0 ; i < nSize ; i++) {
-    		System.out.println(strList.get(i));
+    	System.out.println(strList.get(i));
     	}
-
+	    }
 	public static void list2(List<String> LinkedList) {
 		int nSize = LinkedList.size();
 		for (int i = 0; i < nSize; i++) {

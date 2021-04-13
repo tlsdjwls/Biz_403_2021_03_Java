@@ -2,6 +2,7 @@ package com.callor.score.serviceimpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.callor.score.model.ScoreVO;
 import com.callor.score.service.ScoreService;
@@ -11,35 +12,35 @@ import com.tlsdjwls.standard.service.InputServiceImplV1;
 import com.tlsdjwls.standard.service.MenuServiceImplV1;
 
 public class ScoreServiceImplV1 implements ScoreService {
-	protected MenuService menu;
+	protected MenuService menuService;
 	protected InputService inS;
 	protected List<ScoreVO>scoreList;
-	private ScoreService menuService;
 	
+	protected Scanner scan;
+	protected Object subjectList;
 	
 	
 	public ScoreServiceImplV1() {
 		// TODO Auto-generated constructor stub
 		scoreList = new ArrayList<ScoreVO>();
-		
 		inS = new InputServiceImplV1();
-		menu = new MenuServiceImplV1(null, null);
+		menuService = new MenuServiceImplV1(null, null);
 	}
 
 	@Override
-	public Integer selectMenu() {
+	public void selectMenu() {
 		// TODO Auto-generated method stub
 		String title = "대한 고등학교 성적처리 시스템 2021";
 		List<String>menuList = new ArrayList<String>();
 		menuList.add("1.학생정보 등록");
-		menuList.add("2.성적등록");
-		menuList.add("3.성적정보 열기");
+		menuList.add("2.성적등록"); // inputScore()
+		menuList.add("3.성적정보 열기");// readScore()
 		menuList.add("4.성적정보 저장");
 		menuList.add("5.성적정보 출력");
-	    menu = new MenuServiceImplV1(title, menuList);
+	    menuService = new MenuServiceImplV1(title, menuList);
 	    Integer menu = menuService.selectMenu();
 		if(menu == null) {
-			return null;
+			return;
 		}// 1번코드 
 		/*
 		 * 만약 menu 변수의 값이 1일때
@@ -48,9 +49,9 @@ public class ScoreServiceImplV1 implements ScoreService {
 		 * 값이 2인가 ? , menu 값이 3인가를
 		 * 검사하는 불필요한 코드가 실행된다 
 		 */
-		if(menu == 1){}
-		if(menu == 2) {}
-		if(menu == 3) {}
+	//	if(menu == 1){}
+	//	if(menu == 2) {}
+	//	if(menu == 3) {}
 		// 2번 코드
 		/*
 		 * 만약 menu 변수의 값이 1이면
@@ -62,18 +63,19 @@ public class ScoreServiceImplV1 implements ScoreService {
 		 * 1번 코드에 비하면 약간이나마
 		 * 효율적인 코드가 된다.
 		 */
-		if(menu == 1) {
-			// menu 가 1일때
-		}else if(menu == 2) {
-			
-		}else if(menu == 3) {
-			
-		}
-		return menu;
-		}
-		
+		if(menu == 1) { 
+			// menu 가 1일때 
+		} else if(menu == 2) {
+			this.inputScore();
+		} else if(menu == 3) {
+			this.readScore();
+		} else if(menu == 4) {
+			this.saveScore();
+		} else if(menu == 5) {
+			this.printScore();
+		}		
 		// TODO 매뉴 설정
-	 	
+	}	
 	
 
 	@Override
